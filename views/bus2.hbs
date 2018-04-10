@@ -1,0 +1,32 @@
+<form method="get" action="/bus2">
+
+</form>
+
+
+Return
+
+<div class="form-group pull-right">
+  <input type="text" class="search form-control" placeholder="What you are looking for?">
+</div>
+<table class="table table-striped" id="userTbl">>
+    <thead>
+     <tr>
+       <th>Fare</th>
+       <th>Column</th>
+       <th>Seat fare</th>
+       <th>seat_status</th>
+       <th>row_type</th>
+     </tr>
+   </thead>
+   {{#each json}}
+
+     <tr>
+        <td> {{this.BaseFare}}</td>
+        <td>   {{this.ColumnNo}}</td>
+        <td>{{this.SeatFare}}</td>
+        <td>{{this.seat_status}}</td>
+        <td>{{this.row_type}}</td>
+     </tr>
+     {{/each}}
+
+  </table>

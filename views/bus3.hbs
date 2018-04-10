@@ -1,0 +1,35 @@
+<form method="get" action="/bus2">
+
+</form>
+<br>
+
+
+<div class="form-group pull-right">
+  <input type="text" class="search form-control" placeholder="What you are looking for?">
+</div>
+<table class="table table-striped" id="userTbl">
+  <thead>
+   <tr>
+     <th>BPContactNumber</th>
+     <th>BPName</th>
+     <th>BPAddress</th>
+     <th>BPTime</th>
+     <th>Landmark</th>
+
+   <th>BPLocation</th>
+   </tr>
+ </thead>
+ {{#each json}}
+
+   <tr>
+     <td> {{this.BPContactNumber}}</td>
+      <td> {{this.BPName}}</td>
+      <td>{{this.BPAddress}}</td>
+      <td>   {{this.BPTime}}</td>
+      <td>{{this.BPLandmark}}</td>
+
+      <td>{{this.BPLocation}}</td>
+   </tr>
+   {{/each}}
+
+</table>

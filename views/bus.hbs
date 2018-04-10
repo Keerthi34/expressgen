@@ -1,0 +1,30 @@
+
+
+
+   <div class="form-group pull-right">
+     <input type="text" class="search form-control" placeholder="What you are looking for?">
+ </div>
+ <table class="table table-striped" id="userTbl">
+     <thead>
+       <tr>
+         <th data-priority="1" style="width:20%;">Seat</th>
+         <th data-priority="2" style="width:20%;">Seat type</th>
+         <th data-priority="3" style="width:20%;">Seat fare</th>
+         <th  data-priority="4" style="width:10%;">Seat Name</th>
+       </tr>
+     </thead>
+     <tbody>
+       {{#each json}}
+
+         <tr>
+            <td> {{this.seat_status}}</td>
+            <td>   {{this.SeatType}}</td>
+            <td> {{this.ActualSeatFare}}</td>
+            <td>{{this.SeatName}}</td>
+            <td><a id="load_list" href="modify">Edit</a></td>
+
+         </tr>
+         {{/each}}
+         
+     </tbody>
+ </table>
